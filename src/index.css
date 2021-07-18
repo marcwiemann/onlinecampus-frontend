@@ -11,3 +11,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.test {
+  background-color:#282c34;
+}
+
+
+/*Navigationbar*/
+.nav {
+  position: fixed;
+    width: 20%;
+    background-color: #282c34;
+    height: 100%;
+    color: white;
+    max-width: 300px;
+    z-index: 1;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+img.navlogo {
+  width: 100px;
+  /*border-radius: 50%;*/
+  padding: 8%;
+}
+
+.nav h2 {
+  padding-left: 8%;
+}
+.navDiv {
+  padding: 8%;
+}
+.nav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color:white;
+  display: block;
+  transition: 0.3s;
+}
+.mainPage {
+  margin-left: 20%;
+}
