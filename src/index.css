@@ -1,10 +1,20 @@
+:root{
+  --fomgruen: #009687;
+  --sidebarColor: #282c34;
+  --boxColor: #282c34fa;
+  --backgroundBlack: #1f1f1f;
+  --box100MarginRight: 4%;
+}
+
 body {
+  background-color: white;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -13,7 +23,7 @@ code {
 }
 
 .test {
-  background-color:#282c34;
+  background-color:#282c34; /*#7d8891*/
 }
 
 
@@ -21,7 +31,7 @@ code {
 .nav {
   position: fixed;
     width: 20%;
-    background-color: #282c34;
+    background-color: var(--sidebarColor);
     height: 100%;
     color: white;
     max-width: 300px;
@@ -42,6 +52,10 @@ img.navlogo {
 }
 .navDiv {
   padding: 8%;
+  padding-top: 4%;
+}
+.navDiv h3 {
+  color: var(--fomgruen);
 }
 .nav a {
   padding: 8px 8px 8px 32px;
@@ -51,6 +65,248 @@ img.navlogo {
   display: block;
   transition: 0.3s;
 }
+/*Darkmode Switch*/
+.DarkmodeSwitch {
+  margin-left: 20%;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 24px;
+  margin-left: 12%;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--fomgruen);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--fomgruen);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(56px);
+  -ms-transform: translateX(56px);
+  transform: translateX(56px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*Header*/
+input.searchbar {
+  width: 40%;
+  padding-left: 30px;
+  padding-top: 20px;
+  padding-bottom: 21px;
+  border: 1px solid;
+  border-image: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--sidebarColor);
+  color: white;
+  font-size: 14px;
+  margin-left: 20%;
+  border-color: black;
+}
+.Header {
+  padding: 2% 0;
+  
+}
+.HeaderProfile {
+  float: right;
+  margin-right: 3%;
+}
+.HeaderProfile svg {
+  width: 34px;
+  height: 47px;
+  padding-right: 30px;
+}
+.HeaderProfile img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+/*Main Page*/
 .mainPage {
   margin-left: 20%;
+}
+.box {
+  color: white;
+  background: var(--sidebarColor);
+}
+.top {
+  display: flex;
+}
+
+/*Profile*/
+.profilePage {
+  margin-right: var(--box100MarginRight);
+}
+
+/*Top*/
+
+.image-overlay img {
+  width: 100%;
+  max-width: 150px;
+  max-height: 150px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.image-overlay svg {
+  width: 20px;
+  height: 20px;
+  background: var(--fomgruen);
+  padding: 10px;
+  border-radius: 50%;
+}
+.image-overlay {
+  position: relative;
+  display: inline-block; 
+  transition: transform 150ms ease-in-out;
+}
+
+.image-overlay svg {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.profilePage .portrait {
+  width: 25%;
+  text-align: center;
+  padding: 20px 0px;
+  margin-top:3%;
+}
+.bearbeiten {
+  margin-top: 5%;
+  padding-top: 2%;
+}
+.bearbeiten input:hover {
+  background: var(--fomgruen);
+  color: white;
+}
+.bearbeiten input {
+  width: 7em;
+  height: 2em;
+  font-size: 20px;
+  background: white;
+  border: white;
+  color: black;
+  transition-duration: 0.4s;
+}
+
+
+.aboutProfile h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.aboutProfile h2 {
+  font-size: 40px;
+  margin-bottom: 0px;
+  color: var(--fomgruen);
+}
+.aboutProfile {
+  width: 50%;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+/*Top Ende*/
+/*Profile Main*/
+.profileMain {
+  clear: both;
+  display: flex;
+  margin-top:3%;
+  padding-bottom:6%;
+
+}
+.userinfo {
+  clear: both;
+  width: 28%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+}
+p.aboutList svg {
+  margin-right: 30px;
+  font-size: 20px;
+  color: var(--fomgruen);
+}
+.adressen {
+  clear: both;
+  width: 33%;
+  padding-bottom: 2%;
+}
+.adressen h4 {
+  margin-bottom: 10px;
+  color: var(--fomgruen);
+}
+.adressen p {
+  margin: 3px 0px;
+}
+.downloads a {
+  color: white;
+}
+.downloads a:hover {
+  color: var(--fomgruen);
+}
+
+/*Profile Main Ende*/
+/*Studienbuch*/
+.klausurenKomponente {
+  margin-right: var(--box100MarginRight);
+  width: 44%;
+  float: left;
+  padding-left: 2%;
+  padding-bottom: 2%;
+}
+.klausurenKomponente p {
+  display: inline;
+}
+.klausurenKomponente li {
+  list-style: none;
+}
+h3.klausuren{
+  color: var(--fomgruen);
 }

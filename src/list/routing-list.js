@@ -1,4 +1,5 @@
 import Studienbuch from "./../pages/studienbuch";
+import {Profile} from "./../pages/profile";
 const routes = [
     {
       path: "/",
@@ -34,6 +35,11 @@ const routes = [
       path: "/einstellungen",
       main: () => <h2>Einstellungen</h2>,
     },
+    {
+      path: "/profile",
+      main: () => <Profile/>,
+    },
+
   ];
   
   const persNav = [
