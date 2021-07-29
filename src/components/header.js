@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import {FiMessageSquare} from "react-icons/fi";
+import {IoIosMenu} from "react-icons/io";
 import profilePic from "./../images/titlebild_marc.jpg"
 
 //Header komponente -> Suchleiste, Nachrichten und Profilbild werden angezeigt.
 export const Header = () => {
    return(
 <div className="Header">
+      <div className="burgerMenu">
+         <IoIosMenu/>
+      </div>
         <input type="text" className="searchbar" placeholder="Search..."/>
         <div className="HeaderProfile">
                 <FiMessageSquare />

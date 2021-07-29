@@ -1,10 +1,11 @@
 import Studienbuch from "./../pages/studienbuch";
 import {Profile} from "./../pages/profile";
+import {Home} from "./../pages/home";
 const routes = [
     {
       path: "/",
       exact: true,
-      main: () => <h2>Home</h2>,
+      main: () => <Home />,
     },
     {
       path: "/studienbuch",

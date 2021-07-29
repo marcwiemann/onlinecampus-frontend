@@ -1,19 +1,241 @@
+import { Accordion  } from "../components/Accordion";
+import { ExamBox  } from "../components/ExamBox";
+const semesterModules = [
+  {
+    semester: "WS 2019",
+    modulelist: 
+    [
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "",
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+    ]
+  },
+  {
+    semester: "SS 2020",
+    modulelist: 
+    [
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+    ]
+  },
+  {
+    semester: "WS 2020",
+    modulelist: 
+    [
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+    ]
+  },
+  {
+    semester: "SS 2021",
+    modulelist: 
+    [
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+    ]
+  },
+  {
+    semester: "WS 2021",
+    modulelist: 
+    [
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+    ]
+  },
+  {
+    semester: "SS 2022",
+    modulelist: 
+    [
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+      {
+        module: "Mathematische Grundlagen der Informatik",
+        prof: "Schleip, Ekkehard",
+        note: "1.0"
+      },
+    ]
+  },
+  
+];
+
+const anstehendeKlausuren = [
+  {
+    module: "Hardware - Grundlagen moderner Informationstechnik",
+    datum: "20.07.2022",
+    standort: "Düsseldorf"
+  },
+  {
+    module: "Praxisprojekt I",
+    datum: "20.07.2022",
+    standort: "Düsseldorf"
+  },
+  {
+    module: "Geschäftsprozessmodellierung",
+    datum: "20.07.2022",
+    standort: "Düsseldorf"
+  }
+];
+const aktuelleKlausuren = [
+  {
+    module: "Hardware - Grundlagen moderner Informationstechnik",
+    datum: "20.07.2022",
+    standort: "Düsseldorf",
+    note: "1.0"
+  },
+  {
+    module: "Praxisprojekt I",
+    datum: "20.07.2022",
+    standort: "Düsseldorf",
+    note: "1.0"
+  },
+  {
+    module: "Geschäftsprozessmodellierung",
+    datum: "20.07.2022",
+    standort: "Düsseldorf",
+    note: "1.0"
+  }
+];
+
 export default function Studienbuch() {
     return (
     <div className="studienbuch">
       <h1 className="ueberschrift">Studienbuch</h1>
-      <div class="top"></div>
-      <div className="klausurenKomponente anstehend box">
-        <h2>Anstehende Prüfungen</h2>
-        <h3 className="klausuren">Algorithmen und Datenstrukturen</h3><p className="note beschreibungKlausur">Standort Düsseldorf - Samstag, 31.07.2021</p>
-        <h3 className="klausuren">Projektmanagement</h3><p className="note beschreibungKlausur">Samstag, 31.07.2021</p>
-        <h3 className="klausuren">Prozedurale Programmierung</h3><p className="note beschreibungKlausur">Samstag, 31.07.2021</p>
+      <div class="top">
+        <ExamBox art={true} examList={anstehendeKlausuren} /> 
+        <ExamBox art={false} examList={aktuelleKlausuren} />   
       </div>
-      <div className="klausurenKomponente aktuell box">
-        <h2>Aktuelle Prüfungen</h2>
-        <h3 className="klausuren">Hardware - Grundlagen moderner Informationstechnik</h3><p className="note beschreibungKlausur">1.0</p>
-        <h3 className="klausuren">Geschäftsprozessmodellierung </h3><p className="note beschreibungKlausur">1.0</p>
-        <h3 className="klausuren">Praxisprojekt I</h3><p className="note beschreibungKlausur">1.0</p>
-      </div>
+      <Accordion semesterModules={semesterModules} />
     </div>);
   }

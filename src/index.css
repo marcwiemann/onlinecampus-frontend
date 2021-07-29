@@ -17,6 +17,12 @@ body {
   
 }
 
+h1, h2{
+  color: var(--fomgruen);
+}
+p {
+  color: #d0d0d0;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -49,6 +55,7 @@ img.navlogo {
 
 .nav h2 {
   padding-left: 8%;
+  color:white;
 }
 .navDiv {
   padding: 8%;
@@ -150,8 +157,10 @@ input.searchbar {
   border-color: black;
 }
 .Header {
-  padding: 2% 0;
-  
+  padding-top: 2%;
+}
+.burgerMenu{
+  display:none;
 }
 .HeaderProfile {
   float: right;
@@ -184,6 +193,7 @@ input.searchbar {
 /*Profile*/
 .profilePage {
   margin-right: var(--box100MarginRight);
+  margin-top: 2%;
 }
 
 /*Top*/
@@ -304,9 +314,75 @@ p.aboutList svg {
 .klausurenKomponente p {
   display: inline;
 }
+.klausurenKomponente h3 {
+  margin-bottom: 5px;
+}
 .klausurenKomponente li {
   list-style: none;
 }
-h3.klausuren{
-  color: var(--fomgruen);
+
+/*Accordion Studienbuch*/
+.accordion {
+  margin-top: 2%;
+  margin-right: var(--box100MarginRight);
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-bottom: 2%;
+}
+.semester_modules_desc {
+  margin-left: -40px;
+  padding-right: 17px;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 200ms ease-out;
+}
+.semester_modules_desc.show-description {
+  height: unset;
+  margin-bottom: 15px;
+}
+.semester_modules .semester-button {
+  background: none;
+  color: #d0d0d0;
+  font-size: 1.3em;
+  border: none;
+  font-weight: bold;
+  padding-left: 2%;
+  width: 95%;
+  text-align: left;
+  border-bottom: 1px solid var(--fomgruen);
+}
+
+.semester_list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.semester_modules_desc li {
+  list-style: none;
+}
+.semester_modules_desc li p {
+  display: inline;
+}
+p.accordion_note {
+  float: right;
+  margin: 0;
+}
+h4.accordion_module_title {
+  color:white;
+  margin-bottom: 5px;
+}
+
+
+
+
+/*Responsive*/
+
+/*Burger Menu*/
+@media only screen and (max-width: 1024px) {
+  .burgerMenu{
+    display:block;
+  }
+  .nav{display:none;}
 }
