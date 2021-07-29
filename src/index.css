@@ -3,6 +3,7 @@
   --sidebarColor: #282c34;
   --boxColor: #282c34fa;
   --backgroundBlack: #1f1f1f;
+  --fontGrey: #d0d0d0;
   --box100MarginRight: 4%;
 }
 
@@ -21,7 +22,7 @@ h1, h2{
   color: var(--fomgruen);
 }
 p {
-  color: #d0d0d0;
+  color:   var(--fontGrey);
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -190,6 +191,52 @@ input.searchbar {
   display: flex;
 }
 
+/*Homepage*/
+h2.hompage_desc {
+  color: var( --sidebarColor );
+  margin-top: 0px;
+}
+h1.homepage_title {
+  margin-bottom: 5px;
+}
+
+/*Kalendar*/
+.calendar {
+  width: 60%;
+}
+.calendar table {
+  width: 100%;
+  padding: 2%;
+}
+span.Datum {
+  font-size: 12px;
+}
+
+.calendar td {
+  text-align: center;
+}
+
+.trEintrag td {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+h3.tag {
+  margin-top: 2%;
+  margin-bottom: 0px;
+}
+span.calendarEintragArt {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--fomgruen);
+}
+button.calendarEintrag {
+  background: none;
+  color: white;
+  border: none;
+}
+
+
 /*Profile*/
 .profilePage {
   margin-right: var(--box100MarginRight);
@@ -344,7 +391,7 @@ p.aboutList svg {
 }
 .semester_modules .semester-button {
   background: none;
-  color: #d0d0d0;
+  color:   var(--fontGrey);
   font-size: 1.3em;
   border: none;
   font-weight: bold;
@@ -372,6 +419,10 @@ p.accordion_note {
 h4.accordion_module_title {
   color:white;
   margin-bottom: 5px;
+}
+button.semester-button svg {
+  float: right;
+  margin-right: 5%;
 }
 
 
