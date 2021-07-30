@@ -1,6 +1,7 @@
 import React from "react";
 import {IoIosArrowUp} from "react-icons/io";
 import {IoIosArrowDown} from "react-icons/io";
+import {Verantstaltungen} from "./Veranstaltungen";
 const AccordionItem = ({
   showDescription,
   ariaExpanded,
@@ -11,17 +12,6 @@ const AccordionItem = ({
   display,
   }) => {
     var arrow = ariaExpanded === "true" ? <IoIosArrowUp/> : <IoIosArrowDown/>;
-    const modules = item.modulelist.map((item, index) => {
-      var note = item.note === "" ? "Noch keine Note vorhanden" : item.note;
-
-      return (
-        <li>
-              <h4 className="accordion_module_title">{item.module}</h4>
-              <p className="accordion_prof">Lehrender: {item.prof}</p>
-              <p className="accordion_note"> Note: {note}</p>
-            </li>
-      );
-    });
   return (
     <div className={`semester_modules ${display}`} key={item.semester}>
       <dt>
@@ -40,10 +30,7 @@ const AccordionItem = ({
       <div id={`semester${index + 1}_desc`}
         data-qa="semester_modules"
         className={`semester_modules_desc ${showDescription}`}>
-          <ul>
-            
-        {modules}
-        </ul>
+            <Verantstaltungen modulelist={item.modulelist}/>
         </div>
       </dd>
     </div>

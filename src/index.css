@@ -187,7 +187,7 @@ input.searchbar {
   color: white;
   background: var(--sidebarColor);
 }
-.top {
+.top, .middle {
   display: flex;
 }
 
@@ -207,6 +207,7 @@ h1.homepage_title {
 .calendar table {
   width: 100%;
   padding: 2%;
+  padding-top: 5%;
 }
 span.Datum {
   font-size: 12px;
@@ -217,7 +218,7 @@ span.Datum {
 }
 
 .trEintrag td {
-  padding-top: 2%;
+  padding-top: 5%;
   padding-bottom: 2%;
 }
 
@@ -235,7 +236,29 @@ button.calendarEintrag {
   color: white;
   border: none;
 }
-
+.calendar_information {
+  margin-left: 2%;
+  width: 32%;
+  padding: 0 0 2% 2%;
+}
+/*Veranstaltungen*/
+.veranstaltungen {
+  margin-top: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+  width: 45%;
+  padding-bottom: 2%;
+}
+/*ExamBox Homepage*/
+.homepage .klausurenKomponente {
+  margin-top: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+  width: 45%;
+  padding-bottom: 2%;
+  float: unset;
+  margin-left: 2%;
+}
 
 /*Profile*/
 .profilePage {
@@ -406,7 +429,7 @@ p.aboutList svg {
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
-.semester_modules_desc li {
+li {
   list-style: none;
 }
 .semester_modules_desc li p {

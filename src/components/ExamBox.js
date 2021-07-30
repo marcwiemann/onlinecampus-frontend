@@ -1,5 +1,5 @@
 import React from 'react';
-/*@art: boolean */
+/*@art: boolean == true -> Anstehende Klausuren, false -> aktuelle Klausuren */
 export const ExamBox = ({art, examList}) => {
     const artClassNameString = art ? "anstehend" : "aktuell";
     const artString = art ? "Anstehende" : "Aktuelle";
@@ -10,7 +10,7 @@ export const ExamBox = ({art, examList}) => {
         listHtml = (
           <div>
               <h3 className="examBoxModulName">{exam.module}</h3>
-              <p className="examBoxDatum">{exam.datum} - </p>
+              <p className="examBoxDatum">{exam.datum} - </p> 
               <p className="examBoxStandort">Standort {exam.standort}</p>
           </div>
         );

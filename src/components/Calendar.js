@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 
 
 export const Calendar = ({calendarItemsList}) => {
+    const [activeIndex, setActiveIndex] = useState(1);
+
     function getWeekDates (date){
         const currentDate = new Date();
         var locale = "de-DE";
@@ -10,13 +12,11 @@ export const Calendar = ({calendarItemsList}) => {
           var d = new Date(currentDate.setDate(date+i));
           var weekDay = new Intl.DateTimeFormat(locale, {weekday :'long'}).format(d);
           var stringDate = d.toLocaleDateString(locale);
-          console.log("Day "+weekDay);
           var obj = {
             "stringDate": stringDate,
             "weekDay":  weekDay,
           };
           listDates.push(obj); 
-          console.log(stringDate);
     
         }
         return listDates;
@@ -40,7 +40,9 @@ export const Calendar = ({calendarItemsList}) => {
       
       calendarItemsList.forEach((item, index) => {
           calendarItems[item.day-1] = (
-          <td><button id={`calendarEintrag_${index}`} className="calendarEintrag">
+          <td><button onClick={() => {
+            setActiveIndex(index);
+          }} id={`calendarEintrag_${index}`} className="calendarEintrag">
               <span className="calendarEintragArt">{item.art}</span><br/>
               <span className="calendarEintragZeit">{item.startUhrzeit} - {item.endUhrzeit}</span></button></td>);
       });
@@ -58,7 +60,11 @@ export const Calendar = ({calendarItemsList}) => {
         </table>
       </div>
       <div className="calendar_information box">
-
+          <h2>Informationen</h2>
+          <h3>{calendarItemsList[activeIndex].art}</h3>
+          <p>{calendarItemsList[activeIndex].module}</p>
+          <p className="inlineDate">{calendarItemsList[activeIndex].datum} -  {calendarItemsList[activeIndex].startUhrzeit} bis {calendarItemsList[activeIndex].endUhrzeit} Uhr</p>
+          <p className="inlineOrt">FOM {calendarItemsList[activeIndex].adresse.standort} - {calendarItemsList[activeIndex].adresse.adresse}</p>
       </div>
         </div>
       );

@@ -206,7 +206,7 @@ const anstehendeKlausuren = [
     datum: "20.07.2022",
     standort: "Düsseldorf"
   }
-];
+]; 
 const aktuelleKlausuren = [
   {
     module: "Hardware - Grundlagen moderner Informationstechnik",
@@ -236,6 +236,6 @@ export default function Studienbuch() {
         <ExamBox art={true} examList={anstehendeKlausuren} /> 
         <ExamBox art={false} examList={aktuelleKlausuren} />   
       </div>
-      <Accordion semesterModules={semesterModules} />
+      <Accordion semesterModules={semesterModules} noteBool={true} />
     </div>);
   }
