@@ -526,6 +526,31 @@ button.semester-button svg {
   .navDiv:last-child {
     display: none;
 }
+/*Profile Page*/
+.profilePage .portrait{
+  width:unset;
+}
+.aboutProfile {
+  width:unset;
+}
+.bearbeiten{
+  margin-left: 5%;
+}
+.bearbeiten input {
+  width: 6em;
+  height: 1.5em;
+}
+.profileMain {
+  
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.userinfo, .adressen, .downloads{
+  width: 100%;
+  margin-left: 4%;
+  padding-left: 10%;
+}
 
   /*Main Page*/
   .mainPage {
