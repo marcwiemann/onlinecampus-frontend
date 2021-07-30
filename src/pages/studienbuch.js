@@ -1,5 +1,6 @@
 import { Accordion  } from "../components/Accordion";
 import { ExamBox  } from "../components/ExamBox";
+
 const semesterModules = [
   {
     semester: "WS 2019",

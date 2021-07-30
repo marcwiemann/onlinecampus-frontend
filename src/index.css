@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: var(--fontGrey);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -65,8 +65,11 @@ img.navlogo {
 .navDiv h3 {
   color: var(--fomgruen);
 }
+.navDiv svg {
+  padding-right: 10px;
+}
 .nav a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 16px;
   text-decoration: none;
   font-size: 16px;
   color:white;
@@ -154,8 +157,11 @@ input.searchbar {
   background-color: var(--sidebarColor);
   color: white;
   font-size: 14px;
-  margin-left: 20%;
+  margin-left: 22%;
   border-color: black;
+}
+.searchIcon{
+  display: none;
 }
 .Header {
   padding-top: 2%;
@@ -181,7 +187,7 @@ input.searchbar {
 
 /*Main Page*/
 .mainPage {
-  margin-left: 20%;
+  margin-left: 22%;
 }
 .box {
   color: white;
@@ -207,7 +213,6 @@ h1.homepage_title {
 .calendar table {
   width: 100%;
   padding: 2%;
-  padding-top: 5%;
 }
 span.Datum {
   font-size: 12px;
@@ -241,10 +246,16 @@ button.calendarEintrag {
   width: 32%;
   padding: 0 0 2% 2%;
 }
+
+.calendarEintrag.active {
+  background: var(--fontGrey);
+  color:var(--sidebarColor);
+  padding: 15px;
+}
+
 /*Veranstaltungen*/
 .veranstaltungen {
   margin-top: 2%;
-  padding-top: 2%;
   padding-left: 2%;
   width: 45%;
   padding-bottom: 2%;
@@ -252,7 +263,6 @@ button.calendarEintrag {
 /*ExamBox Homepage*/
 .homepage .klausurenKomponente {
   margin-top: 2%;
-  padding-top: 2%;
   padding-left: 2%;
   width: 45%;
   padding-bottom: 2%;
@@ -395,7 +405,7 @@ p.aboutList svg {
 .accordion {
   margin-top: 2%;
   margin-right: var(--box100MarginRight);
-  padding-top: 2%;
+  padding-top: 1%;
   padding-left: 2%;
   padding-bottom: 2%;
 }
@@ -453,10 +463,144 @@ button.semester-button svg {
 
 /*Responsive*/
 
-/*Burger Menu*/
-@media only screen and (max-width: 1024px) {
-  .burgerMenu{
+/*Calendar volle Breite*/
+@media only screen and (max-width: 1500px) {
+  .homepage .top{
     display:block;
   }
-  .nav{display:none;}
+  .calendar, .calendar_information{
+    width: 94%;
+    padding: 0 0 2% 2%;
+    margin-left: 0px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  /*Header*/
+  .Header {
+    padding: 2%;
+    display: flex;
+    background: var(--backgroundBlack);
+  }
+  .burgerMenu{
+    display:block;
+    width: 10%;
+  }
+  .burgerMenu button {
+    background: none;
+    border: none;
+    margin-top: 10%;
+}
+  .burgerMenu svg {
+    font-size: 40px;
+    margin-left: 5%;
+    color: white;
+  }
+  input.searchbar{
+    margin-left: 0;
+    width: 58%;
+    padding: 0;
+    padding-left: 2%;
+  }
+  .HeaderProfile {
+    color: white;
+    margin-left: auto;
+    margin-right: 2%;
+  }
+  .nav {
+    display: none;
+    position: absolute;
+    height: unset;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 11%;
+    background: #282c34;
+    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .nav.resposiveDisplay {
+    display: grid;
+}
+  .nav img, .nav h2{
+    display: none;
+  }
+  .navDiv:last-child {
+    display: none;
+}
+
+  /*Main Page*/
+  .mainPage {
+    margin-left: 2%;
+  }
+  .mainPage .box{
+    width: 96%;
+    display:block;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .top, .middle{
+    display:block;
+  }
+
+  /*Klausurenkomponente*/
+  .klausurenKomponente{
+    float:unset;
+    padding-top: 2%;
+    margin-top: 2%;
+    padding-top: 1%;
+  }
+  .semester_modules_desc li p {
+    display: table-row;
+  }
+  p.accordion_note {
+      float: unset;
+      margin: 0;
+  }
+  /*responsive Calendar*/
+  .calendarResponsive.box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+}
+
+@media only screen and (max-width: 700px) {
+  .responsiveCalendarEintrag {
+    padding: 10px;
+    background: none;
+    border: none;
+    color: white;
+    margin-top: 5%;
+  }
+  .calendarEintragModule {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--fomgruen);
+  }
+  span.calendarEintragArt {
+    font-size: 1em;
+    font-weight: normal;
+    color: white;
+}
+}
+@media only screen and (max-width: 600px) {
+  .semester_list {
+    display: block;
+  }
+  .searchIcon{
+    display: inline;
+  }
+  input.searchbar{
+    display: none;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+  h2{
+    font-size: 1.4em;
+  }
+  h3{
+    font-size: 1.2em;
+  }
+
 }
